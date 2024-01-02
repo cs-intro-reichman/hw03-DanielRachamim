@@ -11,7 +11,20 @@ public class UniqueChars {
      * unless they are space characters.
      */
     public static String uniqueChars(String s) {
-        // Replace the following statement with your code
-        return null;
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            char currentChar = s.charAt(i);
+
+            // Check if the character is not a space or if it has not been added to the result yet
+            if (currentChar != ' ' && result.indexOf(String.valueOf(currentChar)) == -1) {
+                result.append(currentChar);
+            } else if (currentChar == ' ') {
+                // Space characters are always added to the result
+                result.append(currentChar);
+            }
+        }
+
+        return result.toString();
     }
 }
