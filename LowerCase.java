@@ -10,23 +10,22 @@ public class LowerCase {
      * except that all the upper-case letters are converted to lower-case letters.
      * Non-letter characters are left as is.
      */
-    public static String lowerCase(String s) {
-        StringBuilder result = new StringBuilder();
+    public static String lowerCase(String str) {
+         String result = "";
 
-        for (int i = 0; i < s.length(); i++) {
-            char currentChar = s.charAt(i);
+        for (int i = 0; i < str.length(); i++) {
+            char currentChar = str.charAt(i);
 
-            // Check if the character is an upper-case letter
+            // Check if the character is an uppercase letter
             if (currentChar >= 'A' && currentChar <= 'Z') {
-                // Convert to lower-case
-                char lowerCaseChar = (char) (currentChar + ('a' - 'A'));
-                result.append(lowerCaseChar);
+                // Convert to lowercase by adding the ASCII difference
+                result += (char) (currentChar + ('a' - 'A'));
             } else {
-                // Not an upper-case letter, leave as is
-                result.append(currentChar);
+                // If not an uppercase letter, leave the character unchanged
+                result += currentChar;
             }
         }
 
-        return result.toString();
+        return result;
     }
 }
