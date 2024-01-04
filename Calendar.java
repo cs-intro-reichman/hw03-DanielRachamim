@@ -18,7 +18,6 @@ public class Calendar {
 
         while (year <= inputYear) {
             if (year == inputYear) {
-                *//
                 if (dayOfWeek == 1) {
                     System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
                     if (dayOfMonth == 1) {
